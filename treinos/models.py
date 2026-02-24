@@ -43,7 +43,7 @@ class ExerciseLog(models.Model):
     set_number = models.PositiveSmallIntegerField()
     reps = models.PositiveSmallIntegerField(null=True, blank=True) 
     weight = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
-    duration_secods = models.PositiveSmallIntegerField(null=True, blank=True)
+    duration_seconds = models.PositiveSmallIntegerField(null=True, blank=True)
     is_completed = models.BooleanField(default=False)
 
     def __str__(self):
