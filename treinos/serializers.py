@@ -5,26 +5,24 @@ from .models import Exercise, WorkoutTemplate, WorkoutSession, ExerciseLog
 class ExerciseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Exercise
-
         fields = ['id', 'name', 'body_part', 'tracking_type']
 
 
 class WorkoutTemplateSerializer(serializers.ModelSerializer):
     class Meta:
         model = WorkoutTemplate
-
         fields = ['id', 'user', 'name', 'is_active']
+        read_only_fields = ['user']
 
 
 class WorkoutSessionSerializer(serializers.ModelSerializer):
     class Meta:
         model = WorkoutSession
-
         fields = ['id', 'user', 'template', 'date']
+        read_only_fields = ['user']
 
 
 class ExerciseLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExerciseLog
-
         fields = ['id', 'session', 'exercise', 'set_number', 'reps', 'weight', 'duration_seconds', 'is_completed']

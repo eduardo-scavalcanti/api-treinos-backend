@@ -16,11 +16,17 @@ class WorkoutTemplateViewSet(viewsets.ModelViewSet):
     serializer_class = WorkoutTemplateSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
 
 class WorkoutSessionViewSet(viewsets.ModelViewSet):
     queryset = WorkoutSession.objects.all()
     serializer_class = WorkoutSessionSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
 
 class ExerciseLogViewSet(viewsets.ModelViewSet):
