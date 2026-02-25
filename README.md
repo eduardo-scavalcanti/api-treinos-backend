@@ -98,6 +98,12 @@ A API está publicada e pode ser testada através do Swagger:
 
 🔗 **[Acessar Documentação da API (Swagger)](https://api-treinos-backend.onrender.com/api/docs/)**
 
+### 🔑 Credenciais para Teste (Demo)
+Para testar as rotas protegidas no Swagger sem precisar criar um usuário via código, utilize a conta de demonstração abaixo para gerar o seu **Bearer Token** na rota `POST /api/token/`:
+
+- **Usuário:** `visitante`
+- **Senha:** `Teste@12345`
+
 <img width="1898" height="907" alt="Image" src="https://github.com/user-attachments/assets/1d2e1d33-891c-4107-928c-2653b60f92d8" />
 
 ---
