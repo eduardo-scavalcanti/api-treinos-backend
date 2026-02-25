@@ -23,15 +23,15 @@ API robusta desenvolvida para gerenciar treinos e sessões de exercícios. O pro
 
 ---
 
-## 🧠 Embasamento Técnico
-
-### 🗄️ Modelagem de Dados (ERD)
+## 🗄️ Modelagem de Dados (ERD)
 O banco de dados foi projetado para garantir a integridade referencial. Abaixo, a representação das entidades de Usuários, Templates e Sessões desenvolvida no **dbdiagram.io**.
 
 
 <img width="908" height="763" alt="Image" src="https://github.com/user-attachments/assets/1143258e-9fc5-4a32-9f35-4fa3d8a74965"/>
 
-### 🔐 Fluxo de Autenticação
+---
+
+## 🔐 Fluxo de Autenticação
 A segurança é baseada no padrão Bearer Token, garantindo que o servidor não precise armazenar sessões, facilitando a escalabilidade horizontal.
 
 1.  **Request:** Usuário envia credenciais.
