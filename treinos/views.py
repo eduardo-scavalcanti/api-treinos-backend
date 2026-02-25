@@ -9,6 +9,7 @@ class ExerciseViewSet(viewsets.ModelViewSet):
     queryset = Exercise.objects.all()
     serializer_class = ExerciseSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filterset_fields = ['body_part']
 
 
 class WorkoutTemplateViewSet(viewsets.ModelViewSet):
@@ -27,6 +28,7 @@ class WorkoutSessionViewSet(viewsets.ModelViewSet):
     queryset = WorkoutSession.objects.all()
     serializer_class = WorkoutSessionSerializer
     permission_classes = [permissions.IsAuthenticated]
+    filterset_fields = ['date', 'template']
 
     def get_queryset(self):
         return WorkoutSession.objects.filter(user=self.request.user)
